@@ -1,0 +1,15 @@
+\section{Overview}
+\begin{frame}
+	
+\frametitle{Overview}
+\begin{itemize}
+    \item Long chain of simple operations, rather than a shorter chain of complicated operations.
+    \item This software-oriented stream cipher is built on a $Pseudorandom$ function based on $ADD–ROTATE–XOR$ (ARX) operations.
+    \item It undergoes the following set of operations :
+    \begin{itemize} 
+        \item $\mathbf{32-bit}$ Addition producing the sum $a \ + \ b \ mod 2^{32}$ of two $32-bit$ words $a, \ b$.
+        \item $\mathbf{32-bit}$ Exclusive-Or, producing the $a \ \oplus \ b$ of two $32-bit$ words $a, \ b$.
+        \item Constant-distance $\mathbf{32}$-bit rotation, producing the rotation $a \ \lll \ b$ of a $32-bit$ word $a$ by $b$ bits to the \textbf{left} (where $b$ is constant).
+    \end{itemize}
+\end{itemize}
+\end{frame}

@@ -1,0 +1,16 @@
+\section{Cryptanalysis on Salsa20}
+\subsection{Brute Force Attacks}
+\begin{frame}
+\frametitle{Brute-force attacks}
+The Quarterround ($QR$) function takes a $128$ bit binary number. The total possible combinations of inputs are $2^{128}$.
+
+\begin{alertblock}{}
+    A complete search would thus take about: \small{(Assuming we can know the cryptographic nonce used)}
+    $$\dfrac{2^{128} QR}{10000 QR/s} \ = \ 3.4 \cdot 10^{34} \ \text{seconds} \ \approx \ 10^{27} \ \text{years}$$
+\end{alertblock}
+
+\begin{alertblock}{}
+    A complete search of the $256$ bit key space would take:
+   $$\dfrac{2^{256} runs}{14 runs/s} \ = \  2.4 \cdot \ 10^{76} \ \text{seconds} \ \approx \ 10^{68} \ \text{years}$$
+\end{alertblock}
+\end{frame}

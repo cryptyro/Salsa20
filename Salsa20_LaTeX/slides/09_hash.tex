@@ -1,0 +1,23 @@
+\subsection{The Hash function}
+\begin{frame}
+\frametitle{The $Salsa20$ Hash function}
+
+If $x$ is a $64$-byte sequence then $Salsa20(x)$ is a $64$-byte sequence. 
+\begin{block}{Definition}
+$$Salsa20(x) \ = \ x \ + \ doubleround^{10}(x)$$ 
+Where each $4$-byte sequence is viewed as a word in $little-endian$ form. 
+Starting with $x \ = \ (x[0], \ x[1], \ \ldots, \ x[63])$. Lets, define
+\vspace{-8pt}
+\[
+\begin{gathered}
+x_0 \ = \ \text{littleendian}(x[0], \ x[1], \ x[2], \ x[3]) \\
+\vdots \\
+x_{15} \ = \ \text{littleendian}(x[60], \ x[61], \ x[62], \ x[63])
+\end{gathered}
+\]
+\end{block}
+\begin{exampleblock}{}
+Define $(z_0, \ z_1, \ \ldots, \ z_{15}) \ = \ doubleround^{10}(x_0, \ x_1, \ \ldots, \ x_{15})$ \\ Then $Salsa20(x)$ is the concatenation of : 
+\footnotesize{$$littleendian^{-1}(z_0 + x_0) \ || \ littleendian^{-1}(z_1 + x_1) \ || \ldots || \ littleendian^{-1}(z_{15} + x_{15})$$}
+\end{exampleblock}
+\end{frame}

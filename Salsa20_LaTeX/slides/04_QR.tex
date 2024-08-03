@@ -1,0 +1,16 @@
+
+\subsection{The Quarterround function}
+
+\begin{frame}
+\frametitle{The Quarterround function}
+
+If $x$ is a $4$-word sequence then $quarterround(x)$ is also a $4$-word sequence. 
+\begin{block}{Definition}
+If $x \ = \ (x_0, \ x_1, \ x_2, \ x_3)$ then ${quarterround(x)} \ = \ (y_0, \ y_1, \ y_2, \ y_3)$ where :
+$$y_1 \ = \ x_1 \ \oplus \ ((x_0 \ + \ x_3) \ \lll \ 7)$$
+$$y_2 \ = \ x_2 \ \oplus \ ((x_1 \ + \ x_0) \ \lll \ 9)$$ 
+$$y_3 \ = \ x_3 \ \oplus \ ((x_2 \ + \ x_1) \ \lll \ 13)$$
+$$y_0 \ = \ x_0 \ \oplus \ ((x_3 \ + \ x_2) \ \lll \ 18)$$ 
+\end{block}
+\textbf{N.B. :} Each modification is \textbf{invertible}, so the entire function is \textbf{invertible}.
+\end{frame}

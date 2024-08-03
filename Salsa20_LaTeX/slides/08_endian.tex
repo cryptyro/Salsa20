@@ -1,0 +1,17 @@
+\subsection{The Littleendian function}
+
+\begin{frame}
+\frametitle{The Littleendian function}
+
+If $b$ is a $4$-byte sequence then $littleendian(x)$ is a word.
+\begin{block}{Definition}
+If b = $(b_0,b_1,b_2,b_3)$ then we have, $${littleendian(b)} \ = \ b_0 \ + \ 2^8 \cdot b_1 \ + \ 2^{16} \cdot b_2 \ + \ 2^{24} \cdot b_3$$
+\end{block}
+\begin{example}
+$$littleendian(255, \ 250, \ 126, \ 96) \ = \ 0x \ \underline{60} \ \underline{7e} \ \underline{fa} \ \underline{ff}$$
+$$(255)_{2^{8}} \ = \ (\underline{1111} \ \underline{1111})_2 \ = \ (ff)_{16}$$
+$$(250)_{2^{8}} \ = \ (\underline{1111} \ \underline{1100})_2 \ = \ (fa)_{16}$$
+$$(126)_{2^{8}} \ = \ (\underline{0111} \ \underline{1110})_2 \ = \ (7e)_{16}$$
+$$(96)_{2^{8}} \ = \ (\underline{0110} \ \underline{0000})_2 \ = \ (60)_{16}$$
+\end{example}
+\end{frame}

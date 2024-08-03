@@ -1,0 +1,15 @@
+\subsection{The Expansion function}
+\begin{frame}
+\frametitle{The Salsa20 Expansion function}
+
+If $k$ is a $32$-byte and $n$ is a $16$-byte sequence then $Salsa20_k(n)$
+is a $64$-byte sequence.
+\begin{block}{Definition}
+Define $\sigma_0 \ = \ (101, \ 120, \ 112, \ 97)$, $\sigma_1 \ = \ (110, \ 100, \ 32, \ 51)$, $\sigma_2 \ = \ (50, \ 45, \ 98, \ 121)$, and
+$\sigma_3 \ = \ (116, \ 101, \ 32, \ 107)$. If $k_0, \ k_1, \ n$ are $16$-byte sequences then we have : $$Salsa20_{k_0,k_1} (n) \ = \ Salsa20(\sigma_0, \ k_0, \ \sigma_1, \ n, \ \sigma_2, \ \ k_1, \ \sigma_3)$$
+\end{block}
+\begin{exampleblock}{}
+\textbf{N.B. :} Expansion refers to the expansion of (k, n) into $Salsa20_k(n)$.
+The constants  $\sigma_0$ $\sigma_1$ $\sigma_2$ $\sigma_3$ is "$expand \ 32-byte \ k$" in \textbf{ASCII}.
+\end{exampleblock}
+\end{frame}

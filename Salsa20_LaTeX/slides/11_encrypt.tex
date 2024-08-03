@@ -1,0 +1,20 @@
+\subsection{The Encryption function}
+\begin{frame}
+\frametitle{The Salsa20 Encryption function}
+
+\begin{exampleblock}{}
+\begin{itemize}
+    \item Let $k$ be a $32$-byte sequence of key, $v$ be a $8$-byte sequence of nonce and $m$ be an $\textit{l}$-byte sequence of input, (for some $\textit{l} \in \{0,1,\ldots, 2^{70} \}$).
+    \item The $Salsa20$ \textit{Encryption/Decryption} of \textit{Input} is denoted by $\mathbf{Salsa20_k(v) \ \oplus \ m}$, is an \textit{l}-byte sequence.
+\end{itemize}
+\end{exampleblock}
+\begin{block}{Definition}
+$Salsa20_k(v)$ is a $2^{70}$-byte sequence
+\vspace{-5pt}
+$$Salsa20_k(v,0) \ || \ Salsa20_k(v,1) \ || \ \ldots \ || \ Salsa20_k(v,2^{64}- 1)$$
+$Salsa20_k(v)\oplus m$ implicitly truncates $Salsa20_k(v)$ to the same length as m. In other words : \small{(where $ c[i] = m[i] \oplus Salsa20_k(v, \lfloor\frac{i}{64}\rfloor)[i~ mod 64]$)}
+\vspace{-5pt}
+  $$Salsa20_k(v) \oplus (m[0],m[1],\ldots,m[l-1]) = (c[0], c[1],\ldots, c[l-1])$$  
+\end{block}
+
+\end{frame}

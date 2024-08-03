@@ -1,0 +1,15 @@
+\subsection{The Rowround function}
+
+\begin{frame}
+\frametitle{The Rowround function}
+
+If $y$ is a $16$-word sequence then $rowround(y)$ is a $16$-word sequence.
+
+\begin{block}{Definition}
+If $y \ = \ (y_0, \ y_1, \ y_2, \ y_3, \ \ldots, \ y_{15})$ then ${rowround(y)} \ = \ (z_0, \ z_1, \ z_2, \ z_3, \ \ldots, \ z_{15})$, where 
+$$(z_0, \ z_1, \ z_2, \ z_3) \ = \ quarterround (y_0, \ y_1, \ y_2, \ y_3)$$
+$$(z_5, \ z_6, \ z_7, \ z_4) \ = \ quarterround (y_5, \ y_6, \ y_7, \ y_4)$$
+$$(z_{10}, \ z_{11}, \ z_8, \ z_9) \ = \ quarterround (y_{10}, \ y_{11}, \ y_{8}, \ y_9)$$
+$$(z_{15}, \ z_{12}, \ z_{13}, \ z_{14}) \ = \ quarterround (y_{15}, \ y_{12}, \ y_{13}, \ y_{14})$$
+\end{block}
+\end{frame}

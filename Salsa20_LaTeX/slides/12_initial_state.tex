@@ -1,0 +1,31 @@
+\section{Salsa20 Specification}
+\subsection{Initial State of $Salsa20$}
+
+\begin{frame}
+\frametitle{Initial State of Salsa20}
+A \textbf{word} is an element of $\{0,1,\ldots,2^{32} - 1\}$ \\
+ The internal state is made of \textbf{sixteen} $32$-bit words arranged in a $4 \times 4$ matrix. The initial state contains \textbf{eight} words of \textit{key} , \textbf{two} words of \textit{stream position} , \textbf{two} words of \textit{nonce} (essentially additional stream position bits), and \textbf{four} \textit{fixed words}:\\
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ ||c||c||c||c|| } 
+\hline
+\hline
+"expa" & key & key & key\\
+\hline
+\hline
+key & "nd 3"  & nonce & nonce\\
+\hline
+\hline
+block & block & "2-by" & key\\
+\hline
+\hline
+key & key & key & "te k"\\
+\hline
+\hline
+\end{tabular}
+
+% COLOR EACH CELLS 
+\end{center}
+\caption{$Salsa20$'s initial state (\textbf{IS}) for $32$ byte keys.}
+\end{table}
+\end{frame}

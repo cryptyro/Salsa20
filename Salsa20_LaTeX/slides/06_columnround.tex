@@ -1,0 +1,14 @@
+\subsection{The Columnround function}
+
+\begin{frame}
+\frametitle{The Columnround function}
+
+If $x$ is a $16$-word sequence then $columnround(x)$ is a $16$-word sequence. 
+\begin{block}{Definition}
+If $x \ = \ (x_0, \ x_1, \ x_2, \ x_3, \ \ldots, \ x_{15})$ then ${columnround(x)} = (y_0, \ y_1, \ y_2, \ y_3, \ \ldots, \ y_{15})$ where, 
+$$(y_0, \ y_4, \ y_8, \ y_{12}) = quarterround (x_0, \ x_4, \ x_8, \ x_{12})$$
+$$(y_5, \ y_9, \ y_13, \ y_1) = quarterround (x_5, \ x_9, \ x_{13}, \ x_1)$$
+$$(y_{10}, \ y_{14}, \ y_2, \ y_6) = quarterround (x_{10}, \ x_{14}, \ x_2, \ x_6)$$
+$$(y_{10}, \ y_{14}, \ y_{2}, \ y_6) = quarterround (x_{10}, \ x_{14}, \ x_2, \ x_6)$$
+\end{block}
+\end{frame}
